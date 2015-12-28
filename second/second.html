@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Second Knockout Page</title>
+  </head>
+  <body>
+
+    <div data-bind="foreach: zooAnimals">
+      <p data-bind="text: name + ':'"></p>
+      <p data-bind="text: noise"></p>
+    </div>
+
+    <select name="test" id="test" data-bind="options: $root.zooAnimals, optionsText: 'name', optionsValue: 'name', value: selectedAnimal"></select>
+    <p data-bind="text: selectedAnimal"></p>
+
+    <input type="text" data-bind="value: newName">
+    <input type="text" data-bind="value: newNoise">
+    <button data-bind="click: addAnimal">Add New Animal</button>
+
+    <script type="text/javascript" src='../knockout.min.js'></script>
+    <script type="text/javascript" src='secondScript.js'></script>
+  </body>
+</html>
