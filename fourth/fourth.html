@@ -2,27 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Third Knockout Page</title>
+    <title>Fourth Knockout Page</title>
   </head>
 
   <body>
 
-    <div data-bind="foreach: MainAnimalHolder.animals">
-      <p><span data-bind="text: name"></span> says <span data-bind="text: noise"></span>, and her favorite meal is <span data-bind="text: meal.name"></span></p>
+    <div>
+      <h1>Input/Array Tester!</h1>
+      <p>Name:</p>
+      <input type="text" data-bind="value:inputName">
+      <p>Value:</p>
+      <input type="text" data-bind="value: inputValue"><br>
+      <button data-bind="click:addNew">Add it!</button>
     </div>
 
-    <div>
-      <h2>Add a cat:</h2>
-      <p>Name:</p>
-      <input type="text" data-bind="value: newAnimalName">
-      <p>Sound:</p>
-      <input type="text" data-bind="value: newAnimalNoise">
-      <p>Meal:</p>
-      <select name="" id="" data-bind="options: $root.MainMealHolder.meals, optionsText: 'name', optionsValue: 'id', value: 'selectedMeal'"></select>
-      <button data-bind="click: addAnimal">Add Animal</button>
+    <div data-bind="foreach: pointlessHolder.values">
+      <p><span data-bind="text:name"></span> - <span data-bind="text:value"></span></p>
     </div>
 
     <script type="text/javascript" src='../knockout.min.js'></script>
-    <script type="text/javascript" src='thirdScript.js'></script>
+    <script type="text/javascript" src='fourthScript.js'></script>
   </body>
 </html>
