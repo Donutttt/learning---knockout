@@ -13,11 +13,14 @@
       <input type="text" data-bind="value:inputName">
       <p>Value:</p>
       <input type="text" data-bind="value: inputValue"><br>
+      <p>Another One:</p>
+      <select name="" id="" data-bind="value: selectChoice, options:menuChoices, optionsText: 'title', optionsValue: 'id', event: { change: updateSelect }"></select><br>
+      <br>
       <button data-bind="click:addNew">Add it!</button>
     </div>
 
     <div data-bind="foreach: pointlessHolder.values">
-      <p><span data-bind="text:name"></span> - <span data-bind="text:value"></span></p>
+      <p><span data-bind="text:name"></span> - <span data-bind="text:value"></span><a href="#" data-bind="click: $root.removePair">Remove</a></p>
     </div>
 
     <script type="text/javascript" src='../knockout.min.js'></script>
